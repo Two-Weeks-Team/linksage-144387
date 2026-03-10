@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme tokens */
+:root {
+  --color-background: #F8FAFC;
+  --color-foreground: #0F1A2C;
+  --color-card: #FFFFFF;
+  --color-muted: #E5E7EB;
+  --color-border: #D1D5DB;
+  --color-primary: #0F1A2C;
+  --color-accent: #FF6B35;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #0F1A2C;
+    --color-foreground: #F8FAFC;
+    --color-card: #1F2937;
+    --color-muted: #374151;
+    --color-border: #4B5563;
+    --color-primary: #F8FAFC;
+    --color-accent: #FF6B35;
+    --color-success: #10B981;
+    --color-warning: #F59E0B;
+  }
+}
+
+/* Background treatment */
+html, body {
+  min-height: 100%;
+  background: radial-gradient(circle at top left, var(--color-accent) 0%, var(--color-background) 70%);
+  color: var(--color-foreground);
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Utility placeholders can be added here */
